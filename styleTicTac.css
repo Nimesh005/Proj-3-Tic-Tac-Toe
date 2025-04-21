@@ -21,17 +21,17 @@ body{
 }
 #row-1{
     position: absolute;
-    top: 130px;
+    top: 140px;
     border-bottom: 4px solid #FF0B55;
 }
 #row-2{
     position: absolute;
-    top: 240px;
+    top: 250px;
 }
 #row-3{
     border-top: 4px solid #FF0B55;
     position: absolute;
-    top: 350px;
+    top: 360px;
 }
 .grid{
     display: flex;
@@ -49,4 +49,28 @@ body{
     text-align: center;
     font-weight: bolder;
     color:black;
+}
+.btn-reset{
+    border: none;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    border-radius: 20px;
+    background-color: #FF0B55;
+    color: white;
+    padding: 5px 20px 5px 20px;
+}
+.btn-reset:hover{
+    opacity: 70%;
+}
+.player{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    font-size: larger;
+}
+.ele{
+    position: relative;
+    bottom: -400px;
+    color: #FF0B55;
 }
