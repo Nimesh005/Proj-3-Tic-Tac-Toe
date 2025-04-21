@@ -31,19 +31,22 @@ const winPatterns = [
 function checkWinner(player) {
     for (let i = 0; i < winPatterns.length; i++) {
         let pattern = winPatterns[i];
-        let allMatch = true;
+        let allMatch = 0;
+        // let allMatch = true;
 
         for (let j = 0; j < pattern.length; j++) {
             let r = pattern[j][0];
             let c = pattern[j][1];
 
-            if (grid[r][c] !== player) {
-                allMatch = false;
-                break;
+            if (grid[r][c] === player) {
+                allMatch++;
             }
+            // if (grid[r][c] !== player) {  
+            //     allMatch = false;
+            //     break;
+            // }
         }
-
-        if(allMatch){
+        if(allMatch===3){
             return true;
         }
     }
