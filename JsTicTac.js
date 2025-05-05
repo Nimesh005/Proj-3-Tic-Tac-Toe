@@ -1,3 +1,6 @@
+let p1=prompt("Enter Player 1 Name");
+let p2=prompt("Enter Player 2 Name");
+
 let button=document.querySelectorAll(".box");
 
 let currValue = 0;
@@ -54,6 +57,7 @@ function checkWinner(player) {
 }
 
 let players=document.getElementsByClassName("ele")[0];
+players.innerHTML=p1+"'s Turn";
 button.forEach((btn) => {
     btn.onclick = () => {
         let row = btn.getAttribute("data-row");
@@ -66,18 +70,18 @@ button.forEach((btn) => {
         moves++;
 
         if(choice==="X"){
-            players.textContent="Player 2 Turn"
+            players.textContent=`${p2}'s Turn`;
             players.style.color="#67AE6E";
         }
         else{
-            players.textContent="Player 1 Turn"
+            players.textContent=`${p1}'s Turn`;
             players.style.color="#FF0B55";
         }
 
 
         if (checkWinner(choice))
         {
-            let winner=(choice==="X")?"Player 1":"Player 2";
+            let winner=(choice==="X")?p1:p2;
             let color=(choice==="X")?"#FF0B55":"#67AE6E";
 
             players.textContent=`${winner} Wins!`
